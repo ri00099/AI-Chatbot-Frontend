@@ -11,7 +11,7 @@ export default function App() {
     const socketRef = useRef(null);
 
     useEffect(() => {
-        socketRef.current = io("http://localhost:3000");
+        socketRef.current = io("https://ai-chatbot-backend-ivory.vercel.app/");
 
         socketRef.current.on("ai-response", ({ result }) => {
             setIsTyping(false);
