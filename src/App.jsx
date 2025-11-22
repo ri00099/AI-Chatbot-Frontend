@@ -11,7 +11,8 @@
         const socketRef = useRef(null);
 
         useEffect(() => {
-            socketRef.current = io("https://ai-chatbot-backend-c0t3.onrender.com");
+
+            socketRef.current = io("https://ai-chatbot-backend-c0t3.onrender.com")
 
             socketRef.current.on("ai-response", ({ result }) => {
                 setIsTyping(false);
